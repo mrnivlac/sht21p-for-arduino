@@ -9,8 +9,8 @@ The sample sketch `examples/basic` simply prints sensor data to Serial. The impo
 
 1. Initialize your sensor at the pins.
 
- `SHT21P sensor(5,4,3);`
- Here, pin 5 corresponds to the VDD, pin 4 with SDA, and pin 3 with SCL.
+ `SHT21P sensor(5,4,3);`  
+ Here, pin 5 corresponds to the VDD, pin 4 with SDA, and pin 3 with SCL.  
  Connecting the VDD pin to a GPIO port allows us to power up/down the sensor.
  
  | SHT21P | Arduino |
@@ -22,15 +22,15 @@ The sample sketch `examples/basic` simply prints sensor data to Serial. The impo
  
 2. Power up the sensor.
 
- `sensor.powerUp();`
+ `sensor.powerUp();`  
  This has a built-in 150ms delay to allow the sensor to start up.
  
 3. Read the temperature or relative humidity and print it to Serial.
 
- `sensor.readTemp()` returns a `float` and has a built-in 1.2s delay.
+ `sensor.readTemp()` returns a `float` and has a built-in 1.2s delay.  
  `sensor.readRH()` returns a `float` and has a built-in 1.2s delay.
  
- The 1.2s delay waits for the sensor to output the correct PWM signal for either temperature or relative humidity.
+ The 1.2s delay waits for the sensor to output the correct PWM signal for either temperature or relative humidity.  
  Both functions will return a `-1` if the expected PWM signal output is not present.
  
 # Other functions
