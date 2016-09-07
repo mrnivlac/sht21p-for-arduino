@@ -20,8 +20,8 @@ float SHT21P::readTemp() {
   t_high = pulseIn(pSDA, HIGH, 20000);
   float t_period = t_low + t_high;
 
-  if(t_low <= 0) return -1;
-  if(t_high <= 0) return -1;
+  if(t_low <= 0) return -100;
+  if(t_high <= 0) return -100;
 
   return -46.85 + 175.72 * t_high/t_period;
 }
@@ -36,8 +36,8 @@ float SHT21P::readRH() {
   t_high = pulseIn(pSDA, HIGH, 20000);
   float t_period = t_low + t_high;
 
-  if(t_low <= 0) return -1;
-  if(t_high <= 0) return -1;
+  if(t_low <= 0) return -100;
+  if(t_high <= 0) return -100;
 
   return -6.0 + 125.0*t_high/t_period;
 }
