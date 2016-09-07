@@ -15,9 +15,9 @@ class SHT21P {
   public:
     SHT21P(int pwr, int sda, int scl);
     float readTemp();
-    float readRelHumidity();
-    void begin();
-    void stop();
+    float readRH();
+    void powerUp();
+    void powerDown();
 };
 
 #endif

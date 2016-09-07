@@ -26,7 +26,7 @@ float SHT21P::readTemp() {
   return -46.85 + 175.72 * t_high/t_period;
 }
 
-float SHT21P::readRelHumidity() {
+float SHT21P::readRH() {
   digitalWrite(pSCL, HIGH);
   delay(1001);
   
@@ -42,12 +42,12 @@ float SHT21P::readRelHumidity() {
   return -6.0 + 125.0*t_high/t_period;
 }
 
-void SHT21P::begin() {
+void SHT21P::powerUp() {
   pinMode(pPWR, OUTPUT);
   digitalWrite(pPWR, HIGH);
-  delay(501);
+  delay(150);
 }
 
-void SHT21P::stop() {
+void SHT21P::powerDown() {
   digitalWrite(pPWR, LOW);
 }
