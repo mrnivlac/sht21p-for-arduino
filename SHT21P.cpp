@@ -12,7 +12,7 @@ SHT21P::SHT21P(int pwr, int sda, int scl) {
 
 float SHT21P::readTemp() {
   digitalWrite(pSCL, LOW);
-  delay(1001);
+  delay(1200);
   
   int16_t t_low = -1;
   t_low = pulseIn(pSDA, LOW, 20000);
@@ -28,7 +28,7 @@ float SHT21P::readTemp() {
 
 float SHT21P::readRH() {
   digitalWrite(pSCL, HIGH);
-  delay(1001);
+  delay(1200);
   
   int16_t t_low = -1;
   t_low = pulseIn(pSDA, LOW, 20000);
