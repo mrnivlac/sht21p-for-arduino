@@ -27,11 +27,11 @@ The sample sketch `examples/basic` simply prints sensor data to Serial. The impo
  
 3. Read the temperature or relative humidity and print it to Serial.
 
- `sensor.readTemp()` returns the degrees Celsius as a `float`.
- `sensor.readRH()` returns the %RH as a float.
+ `sensor.readTemp()` returns the degrees Celsius as a `float`.  
+ `sensor.readRH()` returns the %RH as a `float`.
  
  Both functions include the 1.2s delay to wait for the sensor to output the correct PWM signal for either temperature or relative humidity.  
- Both functions will return a `-100` if the expected PWM signal output is not present.
+ Both functions will return a `-100` if the expected PWM signal output is not detected.
  
 # Other functions
 
